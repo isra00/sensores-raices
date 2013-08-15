@@ -26,6 +26,6 @@ $tdb = new TempoDB(TEMPODB_API_KEY, TEMPODB_API_SECRET);
 foreach ($disk_vhosts as $domain=>$disk_space)
 {
 	$tdb->write_key($domain, array(
-	    new DataPoint(new DateTime(), $disk_space)
+		new DataPoint(new DateTime(), $disk_space)
 	));	
 }
